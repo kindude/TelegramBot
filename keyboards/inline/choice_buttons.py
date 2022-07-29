@@ -1,0 +1,40 @@
+from aiogram import types
+from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+
+from config import URL_GEO
+from keyboards.inline.callback_datas import callback
+
+always_choice = types.ReplyKeyboardMarkup(resize_keyboard=True)
+btn1 = types.KeyboardButton(text='Деканаты', callback_data=callback.new(
+    name="decanats"
+))
+
+btn2 = types.KeyboardButton(text='Профком')
+btn3 = types.KeyboardButton(text='Расписание звонков', callback_data=callback.new(
+    name="call_schedule"
+))
+
+always_choice.row(btn1, btn2, btn3)
+
+
+choice = InlineKeyboardMarkup(row_width=2)
+
+decanat_IST = InlineKeyboardButton(text="Деканат ИСТ", callback_data=callback.new(
+    name="IST"
+))
+choice.insert(decanat_IST)
+decanat_ISP = InlineKeyboardButton(text="Деканат ИСП", callback_data=callback.new(
+    name="ISP"
+))
+choice.insert(decanat_ISP)
+cancel_button = InlineKeyboardButton(text="Отмена", callback_data="cancel")
+choice.insert(cancel_button)
+
+
+decanat_geo = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [
+            InlineKeyboardButton("Посмотреть на карте", url=URL_GEO)
+        ]
+    ]
+)
