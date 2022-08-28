@@ -1,1 +1,1 @@
-worker: python decanats.py
+worker: python app.py
