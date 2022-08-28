@@ -47,3 +47,8 @@ async def show_dec(message: types.message):
                               "*Суббота - Воскресенье*\n_I пара  8:00 - 9:35\nII пара 9:45 - 11:20\nIII пара 11:40 - 13:15\nIV пара 13:25 - 15:00\n"
                               "V пара 15:10 - 16:45\nVI пара 16:55 - 18:30\nVII пара 18:40 - 20:15_",
                          reply_markup=None)
+
+@dp.message_handler(lambda message: message.text == "Контакты")
+async def show_dec(message: types.message):
+    await message.answer(text="",
+                         reply_markup=None)
