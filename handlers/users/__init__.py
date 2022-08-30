@@ -1,3 +1,3 @@
-from .decanats import  dp
+from .decanats import dp
 
 __all__ = ["dp"]
