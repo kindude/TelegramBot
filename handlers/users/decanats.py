@@ -17,6 +17,7 @@ async def show_dec(message: types.message):
                          reply_markup=choice)
 
 
+
 @dp.callback_query_handler(text_contains="IST")
 async def info_decanat_IST(call: CallbackQuery):
     await call.answer(cache_time=60)
@@ -27,7 +28,6 @@ async def info_decanat_IST(call: CallbackQuery):
                               "Контактный телефон: 301-08-64\n"
                               "Почта: fist@donntu.ru\n"
                               "Telegram: https://t.me/ist_donntu", reply_markup=decanat_geo)
-
 
 @dp.callback_query_handler(text_contains="ISP")
 async def info_decanat_ISP(call: CallbackQuery):
