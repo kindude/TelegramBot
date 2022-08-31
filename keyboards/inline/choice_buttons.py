@@ -1,23 +1,24 @@
 from aiogram import types
-from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
 
 from config import URL_GEO_DEC, URL_PROFKOM
 
 from keyboards.inline.callback_datas import callback
 
-always_choice = types.ReplyKeyboardMarkup(resize_keyboard=True)
+always_choice_1 = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
 btn1 = types.KeyboardButton(text='Деканаты', callback_data=callback.new(
     name="decanats"
 ))
 
 btn2 = types.KeyboardButton(text='Профком', callback_data=callback.new(name="profkom"))
+
 btn3 = types.KeyboardButton(text='Расписание звонков', callback_data=callback.new(
     name="call_schedule"
 ))
 btn4 = types.KeyboardButton(text='О нас', callback_data=callback.new(name="about"))
 
-always_choice.row(btn1, btn2, btn3, btn4)
-
+always_choice_1.row(btn1, btn2)
+always_choice_1.row(btn3, btn4)
 
 choice = InlineKeyboardMarkup(row_width=2)
 
