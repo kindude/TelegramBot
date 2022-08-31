@@ -20,7 +20,7 @@ async def show_dec(message: types.message):
 
 @dp.callback_query_handler(text_contains="IST")
 async def info_decanat_IST(call: CallbackQuery):
-    await call.answer(cache_time=60)
+    await call.answer(cache_time=30)
     await call.message.answer("Деканат факультета ИСТ\n"
                               "График работы: 09:00 - 16:00\n"
                               "Перерыв: 12:00 - 12:48\n"
@@ -29,9 +29,10 @@ async def info_decanat_IST(call: CallbackQuery):
                               "Почта: fist@donntu.ru\n"
                               "Telegram: https://t.me/ist_donntu", reply_markup=decanat_geo)
 
+
 @dp.callback_query_handler(text_contains="ISP")
 async def info_decanat_ISP(call: CallbackQuery):
-    await call.answer(cache_time=60)
+    await call.answer(cache_time=30)
     await call.message.answer("Деканат факультета ИСП\n"
                               "График работы: 09:00 - 16:00\n"
                               "Перерыв: 12:00 - 12:48\n"
