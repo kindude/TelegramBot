@@ -2,5 +2,3 @@ BOT_TOKEN = "5321925559:AAFTa29_UKz48nzlhxILT6ZU7qOip12jkno"
 BOT_OWNER = 792720488
 CHANNEL_ID = -1001218995975
 
-URL_GEO_DEC = "https://yandex.ru/maps/org/donntu_korpus_4/1166354463/?ll=37.802884%2C47.993980&z=19.37"
-URL_PROFKOM = "https://yandex.ru/maps/-/CCUVQJUyWB"

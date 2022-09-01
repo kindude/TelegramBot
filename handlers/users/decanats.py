@@ -2,7 +2,7 @@ from aiogram import types
 from aiogram.dispatcher.filters import Command
 from aiogram.types import Message, CallbackQuery
 
-from keyboards.inline.choice_buttons import choice, decanat_geo, always_choice_1, profkom_geo
+from keyboards.inline.choice_buttons import choice, decanat_geo, always_choice_1, profkom_geo, about
 from loader import dp
 
 
@@ -49,18 +49,14 @@ async def show_dec(message: types.message):
 
 @dp.message_handler(lambda message: message.text == "Профком")
 async def show_prof(message: types.message):
-    await message.answer(text="<b>1 корпус ДонНТУ ауд. 210</b> \nVK: https://vk.com/profkomstud_donntu\nInstagram/Telegram: @profkomstud_donntu\nEmail: profkomstud@donntu.org",
+    await message.answer(text="<b>1 корпус ДонНТУ ауд. 210</b> \nVK: https://vk.com/profkomstud_donntu\nInstagram/Telegram: @profkomstud_donntu\nEmail: Profkomstud@donntu.ru",
                          reply_markup=profkom_geo)
 
 
 @dp.message_handler(lambda message: message.text == "О нас")
 async def show_about(message: types.message):
-    await message.answer(text="Мы в VK: https://vk.com/iknt_donntu\n"
-                              "Мы в Instagram: https://instagram.com/knt_donntu\n"
-                              "Сайт факультета ИСТ: http://fist.iknt.donntu.ru\n"
-                              "Сайт факультета ИСП: http://fisp.iknt.donntu.ru\n"
-                              "Отслеживание успеваемости: http://asu.donntu.ru",
-                         reply_markup=None)
+    await message.answer(text="Здесь вы можете найти актуальные ссылки на наши социальные сети!&#128521 &#128523",
+                         reply_markup=about)
 
 
 @dp.callback_query_handler(text="cancel")
@@ -75,6 +71,3 @@ async def show_shed(message: types.message):
                               "<b>Суббота - Воскресенье</b>\n<i>I пара  8:00 - 9:35\nII пара 9:45 - 11:20\nIII пара 11:40 - 13:15\nIV пара 13:25 - 15:00\n"
                               "V пара 15:10 - 16:45\nVI пара 16:55 - 18:30\nVII пара 18:40 - 20:15</i>",
                             reply_markup=None)
-
-
-

@@ -1,7 +1,7 @@
 from aiogram import types
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
 
-from config import URL_GEO_DEC, URL_PROFKOM
+from references import *
 
 from keyboards.inline.callback_datas import callback
 
@@ -25,13 +25,11 @@ choice = InlineKeyboardMarkup(row_width=2)
 decanat_IST = InlineKeyboardButton(text="Деканат ИСТ", callback_data=callback.new(
     name="IST"
 ))
-choice.insert(decanat_IST)
 decanat_ISP = InlineKeyboardButton(text="Деканат ИСП", callback_data=callback.new(
     name="ISP"
 ))
-choice.insert(decanat_ISP)
-cancel_button = InlineKeyboardButton(text="Отмена", callback_data="cancel")
-choice.insert(cancel_button)
+choice.add(decanat_IST, decanat_ISP)
+choice.insert(InlineKeyboardButton(text="Отмена", callback_data="cancel"))
 
 
 decanat_geo = InlineKeyboardMarkup(
@@ -49,3 +47,9 @@ profkom_geo = InlineKeyboardMarkup(
         ]
     ]
 )
+
+about = InlineKeyboardMarkup(row_width=2)
+about.add(InlineKeyboardButton("VK", url=VK_IKNT), InlineKeyboardButton("Instagram", url=INST_IKNT))
+about.add(InlineKeyboardButton("Сайт ИСТ", url=IST_IKNT), InlineKeyboardButton("Сайт ИСП", url=INST_IKNT))
+about.add(InlineKeyboardButton("Успеваемость", url=GRADES))
+
