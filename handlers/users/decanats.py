@@ -21,7 +21,7 @@ async def show_dec(message: types.message):
 async def info_decanat_IST(call: CallbackQuery):
     await call.answer(cache_time=30)
     await call.message.answer("Деканат факультета ИСТ\n"
-                              "График работы: 09:00 - 16:00\n"
+                              "График работы: 09:00 - 14:00\n"
                               "Перерыв: 12:00 - 12:48\n"
                               "Местоположение:г.Донецк,ул.Кобозева,17 ауд.25,\n"
                               "Контактный телефон: 301-08-64\n"
@@ -33,7 +33,7 @@ async def info_decanat_IST(call: CallbackQuery):
 async def info_decanat_ISP(call: CallbackQuery):
     await call.answer(cache_time=30)
     await call.message.answer("Деканат факультета ИСП\n"
-                              "График работы: 09:00 - 16:00\n"
+                              "График работы: 09:00 - 14:00\n"
                               "Перерыв: 12:00 - 12:48\n"
                               "Местоположение:г.Донецк,ул.Кобозева,17 ауд.27,\n"
                               "Контактный телефон:301-08-04\n"
@@ -47,10 +47,6 @@ async def show_dec(message: types.message):
                          reply_markup=choice)
 
 
-@dp.message_handler(lambda message: message.text == "Профком")
-async def show_prof(message: types.message):
-    await message.answer(text="<b>1 корпус ДонНТУ ауд. 210</b> \nVK: https://vk.com/profkomstud_donntu\nInstagram/Telegram: @profkomstud_donntu\nEmail: profkomstud@donntu.org",
-                         reply_markup=profkom_geo)
 
 
 @dp.message_handler(lambda message: message.text == "О нас")
