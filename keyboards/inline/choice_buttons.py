@@ -49,4 +49,3 @@ profkom_geo = InlineKeyboardMarkup(
         ]
     ]
 )
-
