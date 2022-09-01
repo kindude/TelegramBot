@@ -17,7 +17,6 @@ async def show_dec(message: types.message):
                          reply_markup=choice)
 
 
-
 @dp.callback_query_handler(text_contains="IST")
 async def info_decanat_IST(call: CallbackQuery):
     await call.answer(cache_time=30)
