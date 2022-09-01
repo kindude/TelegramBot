@@ -5,20 +5,20 @@ from references import *
 
 from keyboards.inline.callback_datas import callback
 
-always_choice_1 = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
-btn1 = types.KeyboardButton(text='Деканаты', callback_data=callback.new(
+keyboard = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
+dec = types.KeyboardButton(text='Деканаты', callback_data=callback.new(
     name="decanats"
 ))
 
-btn2 = types.KeyboardButton(text='Профком', callback_data=callback.new(name="profkom"))
+prof = types.KeyboardButton(text='Профком', callback_data=callback.new(name="profkom"))
 
-btn3 = types.KeyboardButton(text='Расписание звонков', callback_data=callback.new(
+schedule = types.KeyboardButton(text='Расписание звонков', callback_data=callback.new(
     name="call_schedule"
 ))
-btn4 = types.KeyboardButton(text='О нас', callback_data=callback.new(name="about"))
+about = types.KeyboardButton(text='О нас', callback_data=callback.new(name="about"))
 
-always_choice_1.row(btn1, btn2)
-always_choice_1.row(btn3, btn4)
+keyboard.row(dec, prof)
+keyboard.row(schedule, about)
 
 choice = InlineKeyboardMarkup(row_width=2)
 

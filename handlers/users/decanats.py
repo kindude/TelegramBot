@@ -2,13 +2,13 @@ from aiogram import types
 from aiogram.dispatcher.filters import Command
 from aiogram.types import Message, CallbackQuery
 
-from keyboards.inline.choice_buttons import choice, decanat_geo, always_choice_1, profkom_geo, about
+from keyboards.inline.choice_buttons import choice, decanat_geo, keyboard, profkom_geo, about
 from loader import dp
 
 
 @dp.message_handler(commands="start")
 async def cmd_start(message: types.Message):
-    await message.answer("Что вы хотите узнать?", reply_markup=always_choice_1)
+    await message.answer("Что вы хотите узнать?", reply_markup=keyboard)
 
 
 @dp.message_handler(lambda message: message.text == "Деканаты")
