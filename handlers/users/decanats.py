@@ -23,7 +23,7 @@ async def info_decanat_IST(call: CallbackQuery):
     await call.message.answer("Деканат факультета ИСТ\n"
                               "График работы: 09:00 - 16:00\n"
                               "Перерыв: 12:00 - 12:48\n"
-                                    "Местоположение:г.Донецк,ул.Кобозева,17 ауд.25,\n"
+                            "Местоположение:г.Донецк,ул.Кобозева,17 ауд.25,\n"
                               "Контактный телефон: 301-08-64\n"
                               "Почта: fist@donntu.ru\n"
                               "Telegram: https://t.me/ist_donntu", reply_markup=decanat_geo)
