@@ -49,7 +49,7 @@ async def show_dec(message: types.message):
 
 @dp.message_handler(lambda message: message.text == "Профком")
 async def show_prof(message: types.message):
-    await message.answer(text="<b>1 корпус ДонНТУ ауд. 210</b> \nVK: https://vk.com/profkomstud_donntu\nInstagram/Telegram: @profkomstud_donntu\nEmail: Profkomstud@donntu.ru",
+    await message.answer(text="<b>1 корпус ДонНТУ ауд. 210</b>\nInstagram/Telegram: @profkomstud_donntu\nEmail: Profkomstud@donntu.ru",
                          reply_markup=profkom_geo)
 
 

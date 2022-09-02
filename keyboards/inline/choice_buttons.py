@@ -43,7 +43,8 @@ decanat_geo = InlineKeyboardMarkup(
 profkom_geo = InlineKeyboardMarkup(
     inline_keyboard=[
         [
-            InlineKeyboardButton("Посмотреть на карте", url=URL_PROFKOM)
+            InlineKeyboardButton("Посмотреть на карте", url=URL_PROFKOM),
+            InlineKeyboardButton("VK", url=PROFKOM_VK)
         ]
     ]
 )
